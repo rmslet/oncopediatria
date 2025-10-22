@@ -1,0 +1,44 @@
+name: 🦊 Deploy & Quality
+
+on:
+  push:
+   branches:
+   - main 
+   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+ group: ${{ github.workflow}}-${{ github.ref }}
+ cancel-in-progress: true
+
+jobs: 
+  deploy:
+    name: 🍾 Deploy to Github pages
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+
+    enviroment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🍥 Checkout code
+        uses: actions/configure-pages@v4
+    
+      - name: 🔥 Setup pages
+        uses: actions/configure-pages@v4
+
+      - name: 🐺 upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: 🌕 Deploy to Github pages
+        id: deployment
+        uses: actions/deploy-pages@v4
