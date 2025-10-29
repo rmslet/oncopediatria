@@ -3,8 +3,8 @@ name: 🦊 Deploy & Quality
 on:
   push:
    branches:
-   - main 
-   workflow_dispatch:
+     - main 
+  workflow_dispatch:
 
 permissions:
   contents: read
