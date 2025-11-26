@@ -1,92 +1,77 @@
  body {
      background-color: rgb(190, 218, 232);
  }
-
+ 
  #titulo {
      text-align: center;
      color: rgb(72, 72, 241);
  }
-
+ 
  * {
      margin: 0%;
      padding: 0%;
      box-sizing: border-box;
-
  }
-
+ 
  .navbar {
      background: rgb(114, 114, 227);
      color: rgb(3, 16, 28);
      padding: 0 500px;
-
  }
-
+ 
  .navbar ul {
      display: flex;
      gap: 40px;
      list-style: none;
-
- }
-
+ 
+    }
+ 
  .container {
      margin: auto;
      width: 30%;
      color: cornflowerblue;
-
  }
-
+ 
  .img {
-
      width: 400px;
  }
-
  /* Contato Html */
-
+ 
  #contato {
      text-align: center;
      color: rgb(84, 84, 240);
  }
-
-
+ 
  .formulario-campo {
      display: flex;
      flex: 1;
      gap: 16px;
-     width: 25%;
      justify-content: space-between;
      margin-bottom: 10px;
      align-items: center;
  }
-
+ 
  .formulario-campo label {
      font-family: initial;
  }
-
- .formulario-campo input,
- .formulario-campo select,
- .formulario-campo textarea {
-     width: 300px;
-     justify-self: flex-end;
- }
-
-
  /* html 2 */
+ 
  #especial {
      text-align: center;
      color: rgb(72, 72, 241);
  }
-
+ 
  .foto {
      width: 400px;
  }
-
+ 
  .segundo.html {
      margin: 0 auto;
      width: 30%;
      color: cornflowerblue;
-
  }
-
  
-
- 
+ #config {
+     width: 300px;
+     margin: 0 auto;
+ }
