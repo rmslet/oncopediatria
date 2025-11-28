@@ -13,18 +13,21 @@
      box-sizing: border-box;
  }
  
- .navbar {
+ .menu {
      background: rgb(114, 114, 227);
+ }
+ 
+ .navbar {
      color: rgb(3, 16, 28);
-     padding: 0 500px;
+     width: 30%;
+     margin: 0 auto;
  }
  
  .navbar ul {
      display: flex;
      gap: 40px;
      list-style: none;
- 
-    }
+ }
  
  .container {
      margin: auto;
